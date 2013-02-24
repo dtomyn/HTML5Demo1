@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        /* 
+            Attempt to style all elements that are the below in italics
+            All modern browsers actually will style it correctly
+            However, if put IE in "compatibility mode" it will work like the older versions and will not be in italics
+            ...this demonstrates how can fixup browsers that don't understand undefined elements
+        */
+        SomeHTMLElementThatDoesNotActuallyExists
+        {
+            font-style: italic;
+        }
+    </style>
+    <script>
+        document.createElement("SomeHTMLElementThatDoesNotActuallyExists");
+    </script>
+</head>
+<body>
+    <SomeHTMLElementThatDoesNotActuallyExists>Need to do something to make this look special</SomeHTMLElementThatDoesNotActuallyExists>
+</body>
+</html>
