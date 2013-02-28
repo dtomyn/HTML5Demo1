@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script>
+        function PlayMe(controlId) {
+            $(controlId).get(0).play();
+        }
+        function PauseMe(controlId) {
+            if (!($(controlId).get(0).paused))
+                $(controlId).get(0).pause();
+        }
+        function MuteMe(controlId) {
+            $(controlId).attr('muted', true);
+        }
+        function UnMuteMe(controlId) {
+            $(controlId).attr('muted', false);
+        }
+    </script>
+</head>
+<body>
+    <p>
+    Having problems with Adobe Flash / don't have it installed? Just add the HTML5 swtich flag to the URL
+    TODO!!!
+    </p>
+
+        <label>Use new audio element</label>
+        <br/>
+        <audio id="sampleAudio" controls>
+            <source src="MultiMedia/AudioSample.mp3">
+            <source src="MultiMedia/AudioSample.wav">
+            <source src="MultiMedia/AudioSample.ogg">  
+            Your browser does not support the audio element.          
+        </audio>
+        <input type="button" value="Play" onclick="PlayMe(sampleAudio);"/>
+        <input type="button" value="Pause" onclick="PauseMe(sampleAudio);"/>
+        <input type="button" value="Mute" onclick="MuteMe(sampleAudio);"/>
+        <input type="button" value="Unmute" onclick="UnMuteMe(sampleAudio);"/>
+        <br />
+
+        <div class="seperator"></div>
+        <label>Video with single source:</label>
+        <br/>             
+        
+        <video id="sampleVideo" controls src="MultiMedia/SampleVideo.mp4">
+            Your browser does not support the audio element.
+        </video>
+        <input type="button" value="Mute" onclick="MuteMe(sampleVideo);"/>
+        <input type="button" value="Unmute" onclick="UnMuteMe(sampleVideo);"/>
+        <input type="button" value="Pause" onclick="PauseMe(sampleVideo);"/>
+        <input type="button" value="Play" onclick="PlayMe(sampleVideo);"/>
+        <br/>
+</body>
+</html>
