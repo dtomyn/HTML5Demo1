@@ -22,35 +22,40 @@
 </head>
 <body>
     <p>
-    Having problems with Adobe Flash / don't have it installed? Just add the HTML5 swtich flag to the URL
-    TODO!!!
+    Having problems with Adobe Flash while viewing YouTube videos or don't have it installed? Just add the HTML5 swtich flag to the URL: &html5=1
     </p>
-
-        <label>Use new audio element</label>
-        <br/>
-        <audio id="sampleAudio" controls>
-            <source src="MultiMedia/AudioSample.mp3">
-            <source src="MultiMedia/AudioSample.wav">
-            <source src="MultiMedia/AudioSample.ogg">  
-            Your browser does not support the audio element.          
-        </audio>
-        <input type="button" value="Play" onclick="PlayMe(sampleAudio);"/>
-        <input type="button" value="Pause" onclick="PauseMe(sampleAudio);"/>
-        <input type="button" value="Mute" onclick="MuteMe(sampleAudio);"/>
-        <input type="button" value="Unmute" onclick="UnMuteMe(sampleAudio);"/>
-        <br />
-
-        <div class="seperator"></div>
-        <label>Video with single source:</label>
-        <br/>             
-        
-        <video id="sampleVideo" controls src="MultiMedia/html5-gang.mp4">
-            Your browser does not support the audio element.
-        </video>
-        <input type="button" value="Mute" onclick="MuteMe(sampleVideo);"/>
-        <input type="button" value="Unmute" onclick="UnMuteMe(sampleVideo);"/>
-        <input type="button" value="Pause" onclick="PauseMe(sampleVideo);"/>
-        <input type="button" value="Play" onclick="PlayMe(sampleVideo);"/>
-        <br/>
+    <br />
+    For example... Solvera video...
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=JlxISJcsqxs" target="_blank">Before</a></li>
+        <li><a href="https://www.youtube.com/watch?v=JlxISJcsqxs&html5=1" target="_blank">After applying "switch"</a></li>
+    </ul>
+    <br />
+<!--        
+    <label>Use new audio element</label>
+    <br/>
+    <audio id="sampleAudio" controls>
+        <source src="MultiMedia/AudioSample.mp3">
+        <source src="MultiMedia/AudioSample.wav">
+        <source src="MultiMedia/AudioSample.ogg">  
+        Your browser does not support the audio element.          
+    </audio>
+    <input type="button" value="Play" onclick="PlayMe(sampleAudio);"/>
+    <input type="button" value="Pause" onclick="PauseMe(sampleAudio);"/>
+    <input type="button" value="Mute" onclick="MuteMe(sampleAudio);"/>
+    <input type="button" value="Unmute" onclick="UnMuteMe(sampleAudio);"/>
+    <br />
+-->             
+    <label>Video with single source:</label>
+    <br />
+    <video id="sampleVideo" controls src="MultiMedia/html5-gang.mp4">
+        Your browser does not support the video element.
+    </video>
+    <br />
+    <input type="button" value="Mute" onclick="MuteMe(sampleVideo);"/>
+    <input type="button" value="Unmute" onclick="UnMuteMe(sampleVideo);"/>
+    <input type="button" value="Pause" onclick="PauseMe(sampleVideo);"/>
+    <input type="button" value="Play" onclick="PlayMe(sampleVideo);"/>
+    <br/>
 </body>
 </html>
