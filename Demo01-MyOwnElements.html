@@ -17,11 +17,16 @@
             font-style: italic;
         }
     </style>
-    <script>
-        document.createElement("SomeHTMLElementThatDoesNotActuallyExists");
-    </script>
+<!-- The below is a conditional comment where the code within the comment will only be recognized by IE. see: http://www.quirksmode.org/css/condcom.html -->
+<!‐‐[if lt IE 9]>
+<script type="text/javascript">
+    document.createElement("SomeHTMLElementThatDoesNotActuallyExists");
+</script>
+<!‐‐[endif]‐‐>
 </head>
 <body>
+    <nav><a href="Index.html">Back to Index.html</a></nav>
+    <br />
     <SomeHTMLElementThatDoesNotActuallyExists>Need to do something to make this look special</SomeHTMLElementThatDoesNotActuallyExists>
 </body>
 </html>
