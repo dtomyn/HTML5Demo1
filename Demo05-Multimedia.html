@@ -4,21 +4,6 @@
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <script>
-        function PlayMe(controlId) {
-            $(controlId).get(0).play();
-        }
-        function PauseMe(controlId) {
-            if (!($(controlId).get(0).paused))
-                $(controlId).get(0).pause();
-        }
-        function MuteMe(controlId) {
-            $(controlId).attr('muted', true);
-        }
-        function UnMuteMe(controlId) {
-            $(controlId).attr('muted', false);
-        }
-    </script>
 </head>
 <body>
     <p>
@@ -40,10 +25,6 @@
         <source src="MultiMedia/AudioSample.ogg">  
         Your browser does not support the audio element.          
     </audio>
-    <input type="button" value="Play" onclick="PlayMe(sampleAudio);"/>
-    <input type="button" value="Pause" onclick="PauseMe(sampleAudio);"/>
-    <input type="button" value="Mute" onclick="MuteMe(sampleAudio);"/>
-    <input type="button" value="Unmute" onclick="UnMuteMe(sampleAudio);"/>
     <br />
 -->             
     <label>Video with single source:</label>
@@ -55,10 +36,5 @@
         Your browser does not support the video element.
     </video>-->
     <br />
-    <input type="button" value="Mute" onclick="MuteMe(sampleVideo);"/>
-    <input type="button" value="Unmute" onclick="UnMuteMe(sampleVideo);"/>
-    <input type="button" value="Pause" onclick="PauseMe(sampleVideo);"/>
-    <input type="button" value="Play" onclick="PlayMe(sampleVideo);"/>
-    <br/>
 </body>
 </html>
