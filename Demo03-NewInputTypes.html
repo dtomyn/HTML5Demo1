@@ -54,6 +54,11 @@
             else
                 $('#modernizrCheckForDate').text('nope');
 
+            if (Modernizr.inputtypes.time)
+                $('#modernizrCheckForTime').text('yep');
+            else
+                $('#modernizrCheckForTime').text('nope');
+
             if (elementSupportsAttribute('input', 'placeholder'))
                 $('#manualCheckForPlaceholder').text('yep');
             else
@@ -97,6 +102,9 @@
             <li>
                 <label for="time-picker">Time picker</label>
                 <input type="time" id="time-picker">
+                <div>
+                    Time Supported: <span id="modernizrCheckForTime"></span>(check using modernizr)
+                </div>
             </li>
             <li>
                 <label for="color-picker">Color picker</label>
