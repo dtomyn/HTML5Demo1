@@ -1,54 +1,130 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- The "easy" way to get this page working in IE 9 and less is to run in Google Chrome Frame -->
     <!--    <meta http-equiv="X-UA-Compatible" content="chrome=1">-->
+    <script src="Scripts/jquery-1.6.4.min.js"></script>
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script>
+        //The below function tests whether an input element supports one of the new type features
+        //it does this by:
+        //1) create a "phantom" input element in memory
+        //2) setting the type attribute to the value you want to test
+        //3) seeing if after setting it if the type attribute is still set to "text" or if it got set correctly
+        //That is, a browser that does not support the type given will fallback to be just "text"
+        function inputSupportsType(test) {
+            var input = document.createElement('input');
+            input.setAttribute('type', test);
+            if (input.type === 'text') {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        //The below function tests whether an element supports a particular attribute...
+        //it does this by:
+        //1) creating a "phantom" element in memory
+        //2) checks for the existence of the attribute on that element
+        function elementSupportsAttribute(element, attribute) {
+            var test = document.createElement(element);
+            if (attribute in test) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $(function () {
+            if (inputSupportsType('range'))
+                $('#manualCheckForRange').text('yep');
+            else
+                $('#manualCheckForRange').text('nope');
+
+            if (inputSupportsType('number'))
+                $('#manualCheckForNumber').text('yep');
+            else
+                $('#manualCheckForNumber').text('nope');
+
+            if (Modernizr.inputtypes.date)
+                $('#modernizrCheckForDate').text('yep');
+            else
+                $('#modernizrCheckForDate').text('nope');
+
+            if (elementSupportsAttribute('input', 'placeholder'))
+                $('#manualCheckForPlaceholder').text('yep');
+            else
+                $('#manualCheckForPlaceholder').text('nope');
+
+            if (Modernizr.input.placeholder)
+                $('#modernizrCheckForPlaceholder').text('yep');
+            else
+                $('#modernizrCheckForPlaceholder').text('nope');
+        });
+    </script>
 </head>
 <body>
     <nav><a href="Index.html">Back to Index.html</a></nav>
     <br />
     <h1>Shows new form features... and some other stuff too</h1>
     <form>
-        <div>
-            <label for="range-slider">Slider</label>
-            <input type="range" id="range-slider" min="0" max="20" step="1" value="0">
-            
-        </div>
-        <div>
-            <label for="numeric-spinner">Numeric spinner</label>
-            <input type="number" id="numeric-spinner" value="2">
-        </div>
-        <div>
-            <label for="date-picker">Date picker</label>
-            <input type="date" id="date-picker" value="2013-03-06">
-        </div>
-        <div>
-            <label for="time-picker">Time picker</label>
-            <input type="time" id="time-picker">
-        </div>
-        <div>
-            <label for="color-picker">Color picker</label>
-            <input type="color" id="color-picker" value="ff0000">
-        </div>
-        <div>
-            <label for="text-field">Text field with placeholder</label>
-            <input type="text" id="text-field" placeholder="Insert your text here">
-        </div>
-        <div>
-            <label for="url-field">Url field</label>
-            <input type="url" id="url-field" placeholder="http://www.solvera.ca/" required>
-        </div>
-        <div>
-            <label for="email-field">Email field</label>
-            <input type="email" id="email-field" placeholder="someone@somewhere.com" required>
-        </div>
-        <div>
-            <label for="search-field">Search field</label>
-            <input type="search" id="search-field">
-        </div>
+        <ul>
+            <li>
+
+                <label for="range-slider">Slider</label>
+                <input type="range" id="range-slider" min="0" max="20" step="1" value="0">
+                <div>
+                    Range Supported: <span id="manualCheckForRange"></span>(check using custom script)
+                </div>
+            </li>
+            <li>
+                <label for="numeric-spinner">Numeric spinner</label>
+                <input type="number" id="numeric-spinner" value="2">
+                <div>
+                    Number Supported: <span id="manualCheckForNumber"></span>(check using custom script)
+                </div>
+            </li>
+            <li>
+                <label for="date-picker">Date picker</label>
+                <input type="date" id="date-picker" value="2013-03-06">
+                <div>
+                    Date Supported: <span id="modernizrCheckForDate"></span>(check using modernizr)
+                </div>
+            </li>
+            <li>
+                <label for="time-picker">Time picker</label>
+                <input type="time" id="time-picker">
+            </li>
+            <li>
+                <label for="color-picker">Color picker</label>
+                <input type="color" id="color-picker" value="ff0000">
+            </li>
+            <li>
+                <label for="text-field">Text field with placeholder</label>
+                <input type="text" id="text-field" placeholder="Insert your text here">
+                <div>
+                    Placeholder Supported: <span id="manualCheckForPlaceholder"></span>(check using custom script)
+                </div>
+            </li>
+            <li>
+                <label for="url-field">Url field</label>
+                <input type="url" id="url-field" placeholder="http://www.solvera.ca/" required>
+                <div>
+                    Placeholder Supported: <span id="modernizrCheckForPlaceholder"></span>(check using modernizr)
+                </div>
+            </li>
+            <li>
+                <label for="email-field">Email field</label>
+                <input type="email" id="email-field" placeholder="someone@somewhere.com" required>
+            </li>
+            <li>
+                <label for="search-field">Search field</label>
+                <input type="search" id="search-field">
+            </li>
+        </ul>
         <div>
             <button type="submit">
                 <span>Submit form</span>
@@ -56,8 +132,7 @@
         </div>
     </form>
     ...and here is something kinda crazy..
-    <span contenteditable="true">
-    Yep, I am a span and I am editable!
+    <span contenteditable="true">Yep, I am a span and I am editable!
     </span>
     <div contenteditable="true">And I am a div and am editable</div>
     <p contenteditable="true">...and I am a paragraph (p) and am editable too!</p>
