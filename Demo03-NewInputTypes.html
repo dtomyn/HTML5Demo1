@@ -76,6 +76,7 @@
     <br />
     <h1>Shows new form features... and some other stuff too</h1>
     <form>
+        New input types:
         <ul>
             <li>
 
@@ -119,6 +120,11 @@
             </li>
             <li>
                 <label for="url-field">Url field</label>
+                <!-- 
+                    The below uses a boolean attribute... this is not though a boolean value! 
+                    That is, just by its existence it becomes required... there is no such thing as required="false"
+                    If you want to make it more "XHTML" you would say required="required"
+                -->
                 <input type="url" id="url-field" placeholder="http://www.solvera.ca/" required>
                 <div>
                     Placeholder Supported: <span id="modernizrCheckForPlaceholder"></span>(check using modernizr)
@@ -132,17 +138,29 @@
                 <label for="search-field">Search field</label>
                 <input type="search" id="search-field">
             </li>
+            <li>
+                <label for="postalCode-field">Shows regex (for postal code)</label>
+                <input id="postalCode-field" title="Letter-Number-Letter [optional space] then Number-Letter-Number" pattern="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$" placeholder="S6H 3E2" />
+            </li>
+            <li>
+                <label for="favouriteColour-field">Using datalist</label>
+                <input type="text" id="favouriteColour-field" list="favouriteColours" />
+                <datalist id="favouriteColours">
+                    <option value="Red">
+                    <option value="Blue">
+                    <option value="Green">
+                </datalist>
+            </li>
         </ul>
+        And here is something kinda interesting... contenteditable
+        <div contenteditable="true">And I am a div and am editable</div>
+        <span contenteditable="true">Yep, I am a span and I am editable!</span>
+        <p contenteditable="true">...and I am a paragraph (p) and am editable too!</p>
         <div>
             <button type="submit">
                 <span>Submit form</span>
             </button>
         </div>
     </form>
-    ...and here is something kinda crazy..
-    <span contenteditable="true">Yep, I am a span and I am editable!
-    </span>
-    <div contenteditable="true">And I am a div and am editable</div>
-    <p contenteditable="true">...and I am a paragraph (p) and am editable too!</p>
 </body>
 </html>
