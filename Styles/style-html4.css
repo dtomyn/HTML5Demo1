@@ -1,7 +1,8 @@
 #header {
 	padding:5px;
 	height:80px;
-	width:1050px;
+	width:100%;
+	/*width:1050px;*/
 	margin:auto;
 }
 
@@ -31,7 +32,8 @@ ul#mainnav {
 	display:block;
 	padding:10px;
 	margin:10px auto;
-	width:1050px;
+	/*width:1050px;*/
+	width:100%;
 	background-color:#ccf;
 }
 
@@ -43,12 +45,14 @@ ul#mainnav li {
 }
 
 #container {
-	width:1050px;
+	width:100%;
+	/*width:1050px;*/
 	margin:auto;
 }
 
 #sidebar {
-	width:250px;
+	/*width:250px;*/
+	width:20%;
 	float:left;
 	border-right:3px solid #ccf;
 	margin-bottom:5px;
@@ -67,11 +71,12 @@ ul#mainnav li {
 
 #sidebar li {
 	display:block;
-	width:230px;
-	border:1px solid #006;	
+	/*width:230px;*/
+	width:18%;
+	/*border:1px solid #006;*/	
 	padding:2px;
-	background-color:#eef;
-	letter-spacing:2px;	
+	/*background-color:#eef;*/
+	letter-spacing:2px;
 }
 
 #sidebar li:hover {
@@ -88,7 +93,8 @@ ul#mainnav li {
 #content {
 	float:left;
 	padding:10px;
-	width: 770px;
+	width: 75%;
+	/*width: 770px;*/
 }
 
 #footer {
@@ -96,7 +102,8 @@ ul#mainnav li {
 	border-top:1px solid #006;
 	margin:5px auto;
 	font-style:italic;
-	width:1050px;
+	width:100%;
+	/*width:1050px;*/
 	text-align:right;
 }
 
