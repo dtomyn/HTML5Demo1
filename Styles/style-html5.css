@@ -109,3 +109,34 @@ footer {
 a:hover {
 	color:#f60;
 }
+
+/* The below demonstrates some media queries... not pretty, but demonstrates
+    how as screen gets resized you can change all sorts of things. In this case, 
+    perhaps the decision is that for mobile browsers we don't want to display 
+    a background image
+*/
+/* mobile styles */
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: #FFFFFF;
+        background-image: none;
+    }
+}
+
+/* tablet styles */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        background-color: #C0C0C0;
+        background-image: none;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 769px) {
+    body {
+        background-image: url('../Images/WideBackground.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
