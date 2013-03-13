@@ -1,3 +1,9 @@
+body {
+    background-image: url('../Images/WideBackground.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 #header {
 	padding:5px;
 	height:80px;
