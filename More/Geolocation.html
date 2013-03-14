@@ -20,16 +20,7 @@
 	            navigator.geolocation.getCurrentPosition(function (position) {
 	                lat = position.coords.latitude,
                     lng = position.coords.longitute;
-	            alert("found you at lat " + lat + ", long " + lng + ", accuracy " + position.coords.accuracy);
-
-	            var timeoutVal = 10 * 1000 * 1000;
-	            navigator.geolocation.getCurrentPosition(
-	            	displayPosition,
-	            	displayError,
-	            	{ enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
-	            );
-
-	                // DO STUFF HERE
+	                alert("found you at lat " + lat + ", long " + lng + ", accuracy " + position.coords.accuracy);
 	            }, function (error) {
 	                switch (error.code) {
 	                    case error.PERMISSION_DENIED:
@@ -46,6 +37,15 @@
 	                        break;
 	                }
 	            });
+
+	            var timeoutVal = 10 * 1000 * 1000;
+	            navigator.geolocation.getCurrentPosition(
+	            	displayPosition,
+	            	displayError,
+	            	{ enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+	            );
+	        } else {
+	            alert('navigator.geolocation not supported');
 	        };
 	    })
 
