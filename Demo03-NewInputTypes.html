@@ -43,31 +43,91 @@
                 $('#manualCheckForRange').text('yep');
             else
                 $('#manualCheckForRange').text('nope');
+            if (Modernizr.inputtypes.range)
+                $('#modernizrCheckForRange').text('yep');
+            else
+                $('#modernizrCheckForRange').text('nope');
 
             if (inputSupportsType('number'))
                 $('#manualCheckForNumber').text('yep');
             else
                 $('#manualCheckForNumber').text('nope');
+            if (Modernizr.inputtypes.number)
+                $('#modernizrCheckForNumber').text('yep');
+            else
+                $('#modernizrCheckForNumber').text('nope');
 
+            if (inputSupportsType('date'))
+                $('#manualCheckForDate').text('yep');
+            else
+                $('#manualCheckForDate').text('nope');
             if (Modernizr.inputtypes.date)
                 $('#modernizrCheckForDate').text('yep');
             else
                 $('#modernizrCheckForDate').text('nope');
 
+            if (inputSupportsType('time'))
+                $('#manualCheckForTime').text('yep');
+            else
+                $('#manualCheckForTime').text('nope');
             if (Modernizr.inputtypes.time)
                 $('#modernizrCheckForTime').text('yep');
             else
                 $('#modernizrCheckForTime').text('nope');
 
-            if (elementSupportsAttribute('input', 'placeholder'))
-                $('#manualCheckForPlaceholder').text('yep');
+            if (inputSupportsType('color'))
+                $('#manualCheckForColor').text('yep');
             else
-                $('#manualCheckForPlaceholder').text('nope');
+                $('#manualCheckForColor').text('nope');
+            if (Modernizr.inputtypes.color)
+                $('#modernizrCheckForColor').text('yep');
+            else
+                $('#modernizrCheckForColor').text('nope');
 
             if (Modernizr.input.placeholder)
                 $('#modernizrCheckForPlaceholder').text('yep');
             else
                 $('#modernizrCheckForPlaceholder').text('nope');
+            if (elementSupportsAttribute('input', 'placeholder'))
+                $('#manualCheckForPlaceholder').text('yep');
+            else
+                $('#manualCheckForPlaceholder').text('nope');
+
+            if (Modernizr.inputtypes.url)
+                $('#modernizrCheckForUrl').text('yep');
+            else
+                $('#modernizrCheckForUrl').text('nope');
+            if (inputSupportsType('url'))
+                $('#manualCheckForUrl').text('yep');
+            else
+                $('#manualCheckForUrl').text('nope');
+
+            if (Modernizr.inputtypes.email)
+                $('#modernizrCheckForEmail').text('yep');
+            else
+                $('#modernizrCheckForEmail').text('nope');
+            if (inputSupportsType('email'))
+                $('#manualCheckForEmail').text('yep');
+            else
+                $('#manualCheckForEmail').text('nope');
+
+            if (Modernizr.input.pattern)
+                $('#modernizrCheckForPattern').text('yep');
+            else
+                $('#modernizrCheckForPattern').text('nope');
+            if (elementSupportsAttribute('input', 'pattern'))
+                $('#manualCheckForPattern').text('yep');
+            else
+                $('#manualCheckForPattern').text('nope');
+
+            if (Modernizr.inputtypes.search)
+                $('#modernizrCheckForSearch').text('yep');
+            else
+                $('#modernizrCheckForSearch').text('nope');
+            if (inputSupportsType('search'))
+                $('#manualCheckForSearch').text('yep');
+            else
+                $('#manualCheckForSearch').text('nope');
         });
     </script>
 </head>
@@ -83,39 +143,90 @@
                 <label for="range-slider">Slider</label>
                 <input type="range" id="range-slider" min="0" max="20" step="1" value="0">
                 <div>
-                    Range Supported: <span id="manualCheckForRange"></span>(check using custom script)
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForRange"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForRange"></span> (Modernizr)
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li>
                 <label for="numeric-spinner">Numeric spinner</label>
                 <input type="number" id="numeric-spinner" value="2">
                 <div>
-                    Number Supported: <span id="manualCheckForNumber"></span>(check using custom script)
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForNumber"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForNumber"></span> (Modernizr)
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li>
                 <label for="date-picker">Date picker</label>
                 <input type="date" id="date-picker" value="2013-03-06">
                 <div>
-                    Date Supported: <span id="modernizrCheckForDate"></span>(check using modernizr)
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForDate"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForDate"></span> (Modernizr)
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li>
                 <label for="time-picker">Time picker</label>
                 <input type="time" id="time-picker">
                 <div>
-                    Time Supported: <span id="modernizrCheckForTime"></span>(check using modernizr)
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForTime"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForTime"></span> (Modernizr)
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li>
                 <label for="color-picker">Color picker</label>
                 <input type="color" id="color-picker" value="ff0000">
+                <div>
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForColor"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForColor"></span> (Modernizr)
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
                 <label for="text-field">Text field with placeholder</label>
                 <input type="text" id="text-field" placeholder="Insert your text here">
                 <div>
-                    Placeholder Supported: <span id="manualCheckForPlaceholder"></span>(check using custom script)
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForPlaceholder"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForPlaceholder"></span> (Modernizr)
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li>
@@ -127,24 +238,65 @@
                 -->
                 <input type="url" id="url-field" placeholder="http://www.solvera.ca/" required>
                 <div>
-                    Placeholder Supported: <span id="modernizrCheckForPlaceholder"></span>(check using modernizr)
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForUrl"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForUrl"></span> (Modernizr)
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li>
                 <label for="email-field">Email field</label>
                 <input type="email" id="email-field" placeholder="someone@somewhere.com" required>
+                <div>
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForEmail"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForEmail"></span> (Modernizr)
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
                 <label for="search-field">Search field</label>
                 <input type="search" id="search-field">
+                <div>
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForSearch"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForSearch"></span> (Modernizr)
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
                 <label for="postalCode-field">Shows regex (for postal code)</label>
                 <input id="postalCode-field" title="Letter-Number-Letter [optional space] then Number-Letter-Number" pattern="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$" placeholder="S6H 3E2" />
+                <div>
+                    Supported: 
+                    <ul>
+                        <li>
+                            <span id="manualCheckForPattern"></span> (custom)
+                        </li>
+                        <li>
+                            <span id="modernizrCheckForPattern"></span> (Modernizr)
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
                 <label for="favouriteColour-field">Using datalist</label>
-                <input type="text" id="favouriteColour-field" list="favouriteColours" />
+                <input type="text" id="favouriteColour-field" list="favouriteColours" placeholder="Red, Blue or Green" />
                 <datalist id="favouriteColours">
                     <option value="Red">
                     <option value="Blue">
