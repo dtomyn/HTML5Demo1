@@ -1,7 +1,11 @@
+body {
+    background-image: url('../Images/WideBackground.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 #header {
-	padding:5px;
 	height:80px;
-	width:1050px;
 	margin:auto;
 }
 
@@ -18,7 +22,6 @@
 
 #mainheadings h2 {
 	font-size:large;
-	margin:0px;	
 	color:#006;
 }
 
@@ -29,9 +32,6 @@
 ul#mainnav {
 	clear:both;
 	display:block;
-	padding:10px;
-	margin:10px auto;
-	width:1050px;
 	background-color:#ccf;
 }
 
@@ -42,13 +42,8 @@ ul#mainnav li {
 	border-right:1px solid #000;
 }
 
-#container {
-	width:1050px;
-	margin:auto;
-}
-
 #sidebar {
-	width:250px;
+	width:15%;
 	float:left;
 	border-right:3px solid #ccf;
 	margin-bottom:5px;
@@ -67,11 +62,9 @@ ul#mainnav li {
 
 #sidebar li {
 	display:block;
-	width:230px;
-	border:1px solid #006;	
+	width:10%;
 	padding:2px;
-	background-color:#eef;
-	letter-spacing:2px;	
+	letter-spacing:2px;
 }
 
 #sidebar li:hover {
@@ -81,22 +74,22 @@ ul#mainnav li {
 #sidebar a {
 	text-decoration:none;
 	display:block;
-	width:100%;
+	width:90%;
 }
 
 
 #content {
-	float:left;
-	padding:10px;
-	width: 770px;
+	float:right;
+	width: 80%;
+    margin: 0;
 }
 
 #footer {
 	clear:both;
 	border-top:1px solid #006;
-	margin:5px auto;
 	font-style:italic;
-	width:1050px;
+    float: left;
+	width:100%;
 	text-align:right;
 }
 

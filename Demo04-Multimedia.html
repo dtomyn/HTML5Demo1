@@ -29,12 +29,14 @@
 -->             
     <label>Video with single source:</label>
     <br />
-    <video id="sampleVideo" controls src="http://html5homi.es/html5-gang.mp4">
+    <video id="sampleVideo" controls src="http://html5homi.es/html5-gang.mp4" poster="Images/SolveraLogo.png">
         Your browser does not support the video element.
     </video>
-<!--    <video id="sampleVideo" controls src="MultiMedia/html5-gang.mp4">
-        Your browser does not support the video element.
-    </video>-->
-    <br />
+    <div id="videoSupport">
+        <button onclick="document.getElementById('sampleVideo').play()">Play</button>
+        <button onclick="document.getElementById('sampleVideo').pause()">Pause</button>
+        <button onclick="document.getElementById('sampleVideo').volume += 0.1">Volume Up</button>
+        <button onclick="document.getElementById('sampleVideo').volume -= 0.1">Volume Down</button>
+    </div>
 </body>
 </html>

@@ -1,8 +1,5 @@
 header {
-	display:block;
-	padding:5px;
 	height:80px;
-	width:1050px;
 	margin:auto;
 }
 
@@ -30,9 +27,6 @@ header #logo {
 nav#mainnav {
 	clear:both;
 	display:block;
-	padding:10px;
-	margin:10px auto;
-	width:1050px;
 	background-color:#ccf;
 }
 
@@ -48,11 +42,6 @@ nav#mainnav li {
 	border-right:1px solid #000;
 }
 
-#container {
-	width:1050px;
-	margin:auto;
-}
-
 aside h2 {
 	margin-bottom:0px;
 	font-size:large;
@@ -60,7 +49,7 @@ aside h2 {
 }
 
 aside {
-	width:250px;
+	width:15%;
 	float:left;
 	border-right:3px solid #ccf;
 	margin-bottom:5px;
@@ -73,10 +62,8 @@ aside ul {
 
 aside li {
 	display:block;
-	width:230px;
-	border:1px solid #006;	
+	width:10%;
 	padding:2px;
-	background-color:#eef;
 	letter-spacing:2px;
 }
 
@@ -87,25 +74,74 @@ aside li:hover {
 aside a {
 	text-decoration:none;
 	display:block;
-	width:100%;
+	width:90%;
 }
 
 #content {
-	float:left;
-	padding:10px;
-	width: 770px;
+	float:right;
+	width: 80%;
+    margin: 0;
 }
 
 footer {
-	display:block;
 	clear:both;
 	border-top:1px solid #006;
-	margin:5px auto;
 	font-style:italic;
-	width:1050px;
+    float: left;
+	width:100%;
 	text-align:right;
 }
 
 a:hover {
 	color:#f60;
 }
+
+/* The below demonstrates some media queries... not pretty, but demonstrates
+    how as screen gets resized you can change all sorts of things. In this case, 
+    perhaps the decision is that for mobile browsers we don't want to display 
+    a background image. Also, perhaps the sidebar is no longer relevant and can be hidden
+*/
+/* mobile styles */
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: #FFFFFF;
+        background-image: none;
+    }
+
+    #logo {
+        visibility: hidden;
+        display: none;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
+
+/* tablet styles */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        background-color: #C0C0C0;
+        background-image: none;
+    }
+
+    #logo {
+        visibility: visible;
+        display: block;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 769px) {
+    body {
+        background-image: url('../Images/WideBackground.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #logo {
+        visibility: visible;
+        display: block;
+    }
+}
+
