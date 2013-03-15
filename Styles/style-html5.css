@@ -1,3 +1,9 @@
+body {
+    background-image: url('../Images/WideBackground.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 header {
 	height:80px;
 	margin:auto;
@@ -16,7 +22,6 @@ header hgroup h1 {
 
 header hgroup h2 {
 	font-size:large;
-	margin:0px;	
 	color:#006;
 }
 
@@ -30,11 +35,6 @@ nav#mainnav {
 	background-color:#ccf;
 }
 
-nav#mainnav ul {
-	margin:0px;
-	padding:0px;
-}
-
 nav#mainnav li {
 	display:inline;
 	margin-right:10px;
@@ -42,17 +42,17 @@ nav#mainnav li {
 	border-right:1px solid #000;
 }
 
-aside h2 {
-	margin-bottom:0px;
-	font-size:large;
-	color:#006;	
-}
-
 aside {
 	width:15%;
 	float:left;
 	border-right:3px solid #ccf;
 	margin-bottom:5px;
+}
+
+aside h2 {
+	margin-bottom:0px;
+	font-size:large;
+	color:#006;	
 }
 
 aside ul {
@@ -102,6 +102,7 @@ a:hover {
     a background image. Also, perhaps the sidebar is no longer relevant and can be hidden
 */
 /* mobile styles */
+/*
 @media only screen and (max-width: 480px) {
     body {
         background-color: #FFFFFF;
@@ -117,8 +118,9 @@ a:hover {
         display: none;
     }
 }
-
+*/
 /* tablet styles */
+/*
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     body {
         background-color: #C0C0C0;
@@ -130,8 +132,10 @@ a:hover {
         display: block;
     }
 }
+*/
 
 /* desktop */
+/*
 @media only screen and (min-width: 769px) {
     body {
         background-image: url('../Images/WideBackground.png');
@@ -144,4 +148,4 @@ a:hover {
         display: block;
     }
 }
-
+*/
