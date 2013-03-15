@@ -2,3 +2,9 @@
 	font-family:tahoma;	
 }
 
+article, aside, figcaption, figure, footer, header, hgroup, nav, section, time {
+    background-color: inherit;
+    color: inherit;
+    font-weight: inherit;
+    display: inherit;
+}
