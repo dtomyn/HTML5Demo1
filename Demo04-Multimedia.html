@@ -8,20 +8,22 @@
     <link href="Styles/Main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div data-role="page">
-    <nav><a href="Index.html">Back to Index.html</a></nav>
-    <br />
-    <p>
-    Having problems with Adobe Flash while viewing YouTube videos or don't have it installed? Just add the HTML5 swtich flag to the URL: &html5=1
-    </p>
-    <br />
-    For example... Solvera video...
+    <form id="page" data-role="page">
+        <nav>
+            <a href="Index.html">Back to Index.html</a>
+        </nav>
+        <br />
+        <p>
+            Having problems with Adobe Flash while viewing YouTube videos or don't have it installed? Just add the HTML5 swtich flag to the URL: &html5=1
+        </p>
+        <br />
+        For example... Solvera video...
     <ul>
         <li><a href="https://www.youtube.com/watch?v=JlxISJcsqxs" target="_blank">Before</a></li>
         <li><a href="https://www.youtube.com/watch?v=JlxISJcsqxs&html5=1" target="_blank">After applying "switch"</a></li>
     </ul>
-    <br />
-<!--        
+        <br />
+        <!--        
     <label>Use new audio element</label>
     <br/>
     <audio id="sampleAudio" controls>
@@ -31,18 +33,18 @@
         Your browser does not support the audio element.          
     </audio>
     <br />
--->             
-    <label>Video with single source:</label>
-    <br />
-    <video id="sampleVideo" controls src="http://html5homi.es/html5-gang.mp4" poster="Images/SolveraLogo.png">
-        Your browser does not support the video element.
-    </video>
-    <div id="videoSupport">
-        <button onclick="document.getElementById('sampleVideo').play()">Play</button>
-        <button onclick="document.getElementById('sampleVideo').pause()">Pause</button>
-        <button onclick="document.getElementById('sampleVideo').volume += 0.1">Volume Up</button>
-        <button onclick="document.getElementById('sampleVideo').volume -= 0.1">Volume Down</button>
-    </div>
-</div>
+-->
+        <label>Video with single source:</label>
+        <br />
+        <video id="sampleVideo" controls src="http://html5homi.es/html5-gang.mp4" poster="Images/SolveraLogo.png">
+            Your browser does not support the video element.
+        </video>
+        <div id="videoSupport">
+            <button onclick="document.getElementById('sampleVideo').play()">Play</button>
+            <button onclick="document.getElementById('sampleVideo').pause()">Pause</button>
+            <button onclick="document.getElementById('sampleVideo').volume += 0.1">Volume Up</button>
+            <button onclick="document.getElementById('sampleVideo').volume -= 0.1">Volume Down</button>
+        </div>
+    </form>
 </body>
 </html>
