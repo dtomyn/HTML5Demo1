@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>HTML 5 Demo</title>
+    <script src="Scripts/html5shiv.js" type="text/javascript"></script>
+    <link href="Styles/Main.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/style-html5.css" rel="stylesheet" />
+    <style>
+/* The below demonstrates some media queries... not pretty, but demonstrates
+    how as screen gets resized you can change all sorts of things. In this case, 
+    perhaps the decision is that for mobile browsers we don't want to display 
+    a background image. Also, perhaps the sidebar is no longer relevant and can be hidden
+*/
+/* mobile styles */
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: #FFFFFF;
+        background-image: none;
+    }
+
+    #logo {
+        visibility: hidden;
+        display: none;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
+
+/* tablet styles */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        background-color: #C0C0C0;
+        background-image: none;
+    }
+
+    #logo {
+        visibility: visible;
+        display: block;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 769px) {
+    body {
+        background-image: url('../Images/WideBackground.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #logo {
+        visibility: visible;
+        display: block;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav><a href="Index.html">Back to Index.html</a></nav>
+    <br />
+    <header>
+        <hgroup>
+            <h1>HTML 5 Layout</h1>
+            <h2>The "New" Way</h2>
+        </hgroup>
+        <img id="logo" src="Images/SolveraLogo.png" alt="Logo" >
+    </header>
+    <nav id="mainnav">
+    <ul>
+        <li>Home</li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+    </nav>
+    <div id="container">
+        <aside id="sidebar">
+            <h2>Side Nav</h2>
+            <nav id="sidenav">
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+            </nav>
+            <h2>Related Links</h2>
+            <ul id="relatedlinks">
+                <li><a href="#">Related Link</a></li>
+                <li><a href="#">Related Link</a></li>
+            </ul>
+        </aside>
+        <div id="content">
+            <h2>Welcome!</h2>
+            <p>Here is some <mark>highlighted</mark> content</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Solvera Solutions</p>
+    </footer>
+</body>
+</html>
