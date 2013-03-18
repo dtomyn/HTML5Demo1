@@ -23,7 +23,7 @@
 	        if (navigator.geolocation != undefined) {
 	            navigator.geolocation.getCurrentPosition(function (position) {
 	                lat = position.coords.latitude,
-                    lng = position.coords.longitute;
+                    lng = position.coords.longitude;
 	                alert("found you at lat " + lat + ", long " + lng + ", accuracy " + position.coords.accuracy);
 	            }, function (error) {
 	                switch (error.code) {
