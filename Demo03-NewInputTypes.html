@@ -18,142 +18,86 @@
         <a href="Index.html">Back to Index.html</a></nav>
     <br />
     <h1>
-        Shows new form features... and some other stuff too</h1>
+        Shows new form features</h1>
     New input types:
     <ul>
         <li>
             <label for="range-slider">
-                Slider</label>
+                Range</label>
             <input type="range" id="range-slider" min="0" max="20" step="1" value="0">
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForRange"></span>(custom) </li>
-                    <li><span id="modernizrCheckForRange"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForRange" title="Custom check"></span>
+            <span id="modernizrCheckForRange" title="Modernizer check"></span>
         </li>
         <li>
             <label for="numeric-spinner">
-                Numeric spinner</label>
+                Number</label>
             <input type="number" id="numeric-spinner" value="2">
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForNumber"></span>(custom) </li>
-                    <li><span id="modernizrCheckForNumber"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForNumber" title="Custom check"></span>
+            <span id="modernizrCheckForNumber" title="Modernizer check"></span>
         </li>
         <li>
             <label for="date-picker">
-                Date picker</label>
+                Date</label>
             <input type="date" id="date-picker" value="2013-03-06">
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForDate"></span>(custom) </li>
-                    <li><span id="modernizrCheckForDate"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForDate" title="Custom check"></span>
+            <span id="modernizrCheckForDate" title="Modernizer check"></span>
         </li>
         <li>
             <label for="time-picker">
-                Time picker</label>
+                Time</label>
             <input type="time" id="time-picker">
-            <!--                <div>
-                    Supported: 
-                    <ul>
-                        <li>
-                            <span id="manualCheckForTime"></span> (custom)
-                        </li>
-                        <li>
-                            <span id="modernizrCheckForTime"></span> (Modernizr)
-                        </li>
-                    </ul>
-                </div>-->
         </li>
         <li>
             <label for="color-picker">
-                Color picker</label>
+                Color</label>
             <input type="color" id="color-picker" value="ff0000">
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForColor"></span>(custom) </li>
-                    <li><span id="modernizrCheckForColor"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForColor" title="Custom check"></span>
+            <span id="modernizrCheckForColor" title="Modernizer check"></span>
         </li>
         <li>
             <label for="text-field">
-                Text field with placeholder</label>
+                Placeholder</label>
             <input type="text" id="text-field" placeholder="Insert your text here">
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForPlaceholder"></span>(custom) </li>
-                    <li><span id="modernizrCheckForPlaceholder"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForPlaceholder" title="Custom check"></span>
+            <span id="modernizrCheckForPlaceholder" title="Modernizer check"></span>
         </li>
         <li>
             <label for="url-field">
-                Url field</label>
+                Url and required</label>
             <!-- 
                     The below uses a boolean attribute... this is not though a boolean value! 
                     That is, just by its existence it becomes required... there is no such thing as required="false"
                     If you want to make it more "XHTML" you would say required="required"
                 -->
             <input type="url" id="url-field" placeholder="http://www.solvera.ca/" required>
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForUrl"></span>(custom) </li>
-                    <li><span id="modernizrCheckForUrl"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForUrl" title="Custom check"></span>
+            <span id="modernizrCheckForUrl" title="Modernizer check"></span>
         </li>
         <li>
             <label for="email-field">
-                Email field</label>
+                Email</label>
             <input type="email" id="email-field" placeholder="someone@somewhere.com" required>
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForEmail"></span>(custom) </li>
-                    <li><span id="modernizrCheckForEmail"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForEmail" title="Custom check"></span>
+            <span id="modernizrCheckForEmail" title="Modernizer check"></span>
         </li>
         <li>
             <label for="search-field">
-                Search field</label>
+                Search</label>
             <input type="search" id="search-field">
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForSearch"></span>(custom) </li>
-                    <li><span id="modernizrCheckForSearch"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForSearch" title="Custom check"></span>
+            <span id="modernizrCheckForSearch" title="Modernizer check"></span>
         </li>
         <li>
             <label for="postalCode-field">
-                Shows regex (for postal code)</label>
+                Pattern using regex (for postal code)</label>
             <input id="postalCode-field" title="Letter-Number-Letter [optional space] then Number-Letter-Number"
                 pattern="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$" placeholder="S6H 3E2" />
-            <div>
-                Supported:
-                <ul>
-                    <li><span id="manualCheckForPattern"></span>(custom) </li>
-                    <li><span id="modernizrCheckForPattern"></span>(Modernizr) </li>
-                </ul>
-            </div>
+            <span id="manualCheckForPattern" title="Custom check"></span>
+            <span id="modernizrCheckForPattern" title="Modernizer check"></span>
         </li>
         <li>
             <label for="favouriteColour-field">
-                Using datalist</label>
+                Datalist</label>
             <input type="text" id="favouriteColour-field" list="favouriteColours" placeholder="Red, Blue or Green" />
             <datalist id="favouriteColours">
                 <option value="Red">
@@ -163,11 +107,10 @@
         </li>
     </ul>
     And here is something kinda interesting... contenteditable
-    <div contenteditable="true">
-        And I am a div and am editable</div>
-    <span contenteditable="true">Yep, I am a span and I am editable!</span>
-    <p contenteditable="true">
-        ...and I am a paragraph (p) and am editable too!</p>
+    <br />
+    <span contenteditable="true">I am a span and I am editable!</span>
+    <div contenteditable="true">And I am a div and am editable</div>
+    <p contenteditable="true">...and I am a paragraph (p) and am editable too!</p>
     <div>
         <button type="submit">
             <span>Submit form</span>
@@ -175,6 +118,8 @@
     </div>
     <script>
         $(document).bind('pageinit', updateChecks);
+
+        $(document).ready(updateChecks);
     </script>
     </form>
 </body>
